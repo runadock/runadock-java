@@ -21,16 +21,19 @@ import retrofit.http.Query;
  */
 interface RunadockService {
 
+	final static String X_AUTHORIZATION_HEADER = "X-Authorization";
+
 	@POST("/api/v1/container")
-	Container createContainer(@Header("X-Authorization") String authorization,
+	Container createContainer(@Header(X_AUTHORIZATION_HEADER) String authorization,
 			@Body final CreateContainerRequest containerToCreate);
 
 	@DELETE("/api/v1/container/{id}")
-	void terminateContainer(@Header("X-Authorization") String authorization, @Path("id") final String id);
+	String terminateContainer(@Header(X_AUTHORIZATION_HEADER) String authorization, @Path("id") final String id);
 
 	@GET("/api/v1/container/{id}")
-	Container describeContainer(@Header("X-Authorization") String authorization, @Path("id") final String id);
+	Container describeContainer(@Header(X_AUTHORIZATION_HEADER) String authorization, @Path("id") final String id);
 
 	@GET("/api/v1/container")
-	List<Container> describeContainers(@Header("X-Authorization") String authorization, @Query("all") final Boolean all);
+	List<Container> describeContainers(@Header(X_AUTHORIZATION_HEADER) String authorization,
+			@Query("all") final Boolean all);
 }

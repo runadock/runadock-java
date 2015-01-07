@@ -12,6 +12,7 @@ import com.google.common.collect.Lists;
  */
 public class Container {
 
+	private String id;
 	private String containerId;
 	private String name;
 	private String publicDns;
@@ -243,6 +244,13 @@ public class Container {
 	 */
 	public Money getCost() {
 		return this.cost;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return this.id;
 	}
 
 }

@@ -19,6 +19,14 @@ public interface Runadock {
 	Container createContainer(final CreateContainerRequest containerToCreate);
 
 	/**
+	 * Create a new container.
+	 *
+	 * @param containerToCreate
+	 * @param callback
+	 */
+	void createContainer(final CreateContainerRequest containerToCreate, Callback callback);
+
+	/**
 	 * Terminate a container.
 	 *
 	 * @param id

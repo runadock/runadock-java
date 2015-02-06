@@ -253,4 +253,57 @@ public class Container {
 		return this.id;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Container [id=");
+		builder.append(id);
+		builder.append(",\n containerId=");
+		builder.append(containerId);
+		builder.append(",\n name=");
+		builder.append(name);
+		builder.append(",\n publicDns=");
+		builder.append(publicDns);
+		builder.append(",\n ip=");
+		builder.append(ip);
+		builder.append(",\n source=");
+		builder.append(source);
+		builder.append(",\n state=");
+		builder.append(state);
+		builder.append(",\n cpuShares=");
+		builder.append(cpuShares);
+		builder.append(",\n memory=");
+		builder.append(memory);
+		builder.append(",\n diskSize=");
+		builder.append(diskSize);
+		builder.append(",\n ordered=");
+		builder.append(ordered);
+		builder.append(",\n created=");
+		builder.append(created);
+		builder.append(",\n terminated=");
+		builder.append(terminated);
+		builder.append(",\n orderedBy=");
+		builder.append(orderedBy);
+		builder.append(",\n plan=");
+		builder.append(plan);
+		builder.append(",\n owner=");
+		builder.append(owner);
+		builder.append(",\n ports=");
+		builder.append(ports);
+		builder.append(",\n env=");
+		builder.append(env);
+		builder.append(",\n cmd=");
+		builder.append(cmd);
+		builder.append(",\n pricePerMinute=");
+		builder.append(pricePerMinute);
+		builder.append(",\n pricePerOrder=");
+		builder.append(pricePerOrder);
+		builder.append(",\n cost=");
+		builder.append(cost);
+		builder.append(",\n buildLog=");
+		builder.append(buildLog);
+		builder.append("]");
+		return builder.toString();
+	}
+	
 }
